@@ -35,6 +35,10 @@ class ClassRoom extends React.Component {
   render() {
     return (
       <>
+        <h4>
+          Here is an example of the Students module, to increase and decrease
+          the students count.
+        </h4>
         <label>Students Count: </label>
         <input
           type="number"
@@ -42,14 +46,14 @@ class ClassRoom extends React.Component {
           value={this.state.studentsCount}
           onChange={this.handleOnChange}
         />
-        <br />
-        <br />
-        <button onClick={this.addStudents}>Increase by 1</button>
+        <button onClick={this.addStudents} style={{ marginLeft: "5px" }}>
+          Increase by 1
+        </button>
         <button onClick={this.removeStudents} style={{ marginLeft: "5px" }}>
           Decrease by 1
         </button>
         <br />
-        <span>Students Count: {this.state.studentsCount}</span>
+        Current Students Count: {this.state.studentsCount}
       </>
     );
   }

@@ -11,10 +11,10 @@ const Counter = (props) => {
 
   return (
     <>
-      <h5>
-        Hello, this is an example of the counter app, to increase and decrease
-        the counter
-      </h5>
+      <h4>
+        Here is an example of the counter module, to increase and decrease the
+        counter.
+      </h4>
       <button style={{ marginTop: "5px" }} onClick={incrementHandler}>
         Increase by 1
       </button>
