@@ -39,14 +39,15 @@ class ClassRoom extends React.Component {
         <input
           type="number"
           placeholder="Enter any number..."
+          value={this.state.studentsCount}
           onChange={this.handleOnChange}
         />
         <br />
         <br />
-        <button onClick={this.addStudents}>Increase by 1 </button>
-        <br />
-        <br />
-        <button onClick={this.removeStudents}>Decrease by 1 </button>
+        <button onClick={this.addStudents}>Increase by 1</button>
+        <button onClick={this.removeStudents} style={{ marginLeft: "5px" }}>
+          Decrease by 1
+        </button>
         <br />
         <span>Students Count: {this.state.studentsCount}</span>
       </>
