@@ -1,2 +1,2 @@
-# react-redux-middleware-v3
+# react-redux-middleware-interface-integration
 Created with CodeSandbox
