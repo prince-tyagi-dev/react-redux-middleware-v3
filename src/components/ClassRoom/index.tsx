@@ -17,10 +17,12 @@ class ClassRoom extends React.Component {
 
   addStudents() {
     this.setState((prevState: IClassRoomState) => {
+      debugger;
       return { studentsCount: prevState.studentsCount + 1 };
     });
   }
   removeStudents() {
+    debugger;
     this.setState((prevState: IClassRoomState) => {
       return { ...prevState, studentsCount: prevState.studentsCount - 1 };
     });
@@ -28,7 +30,7 @@ class ClassRoom extends React.Component {
 
   handleOnChange(e) {
     this.setState((prevState) => {
-      return { ...prevState, studentsCount: e.target.value };
+      return { ...prevState, studentsCount: Number(e.target.value) };
     });
   }
 
@@ -45,6 +47,7 @@ class ClassRoom extends React.Component {
           placeholder="Enter any number..."
           value={this.state.studentsCount}
           onChange={this.handleOnChange}
+          maxLength={10}
         />
         <button onClick={this.addStudents} style={{ marginLeft: "5px" }}>
           Increase by 1

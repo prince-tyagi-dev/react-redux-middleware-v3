@@ -2,7 +2,7 @@ import ClassRoom from "./components/ClassRoom";
 import Counter from "./components/Counter";
 import "./styles.css";
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>

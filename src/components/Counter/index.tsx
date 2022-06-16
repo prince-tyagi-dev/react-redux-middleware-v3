@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import { decreaseCounter, increaseCounter } from "../../redux/actions";
+import useTotoList from "../../CustomHooks/useTodoList";
 
 const Counter = (props) => {
   const incrementHandler = () => {
@@ -8,6 +10,12 @@ const Counter = (props) => {
   const decrementHandler = () => {
     props.decreaseCounter(1);
   };
+  const data = useTotoList("https://jsonplaceholder.typicode.com/todos");
+
+  useEffect(() => {
+    console.info("useEffect hook called");
+    console.info("todoList data: ", data);
+  }, [data]);
 
   return (
     <>
