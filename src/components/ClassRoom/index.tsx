@@ -12,7 +12,11 @@ class ClassRoom extends React.Component {
     this.state = { studentsCount: 0 };
     this.addStudents = this.addStudents.bind(this);
     this.removeStudents = this.removeStudents.bind(this);
-    this.handleOnChange = this.handleOnChange.bind(this);
+    // Commented the below line, to show if a function not bind,
+    // with the 'this' keyword, and the function is declared as
+    // an arrow function, then the 'this' keyword will be
+    // automatically binded
+    // this.handleOnChange = this.handleOnChange.bind(this);
   }
 
   addStudents() {
@@ -28,11 +32,11 @@ class ClassRoom extends React.Component {
     });
   }
 
-  handleOnChange(e) {
+  handleOnChange = (e) => {
     this.setState((prevState) => {
       return { ...prevState, studentsCount: Number(e.target.value) };
     });
-  }
+  };
 
   render() {
     return (
