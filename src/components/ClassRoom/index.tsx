@@ -21,12 +21,10 @@ class ClassRoom extends React.Component {
 
   addStudents() {
     this.setState((prevState: IClassRoomState) => {
-      debugger;
       return { studentsCount: prevState.studentsCount + 1 };
     });
   }
   removeStudents() {
-    debugger;
     this.setState((prevState: IClassRoomState) => {
       return { ...prevState, studentsCount: prevState.studentsCount - 1 };
     });
@@ -42,8 +40,8 @@ class ClassRoom extends React.Component {
     return (
       <>
         <h4>
-          Here is an example of the Students module, to increase and decrease
-          the students count.
+          Here is an example of the Students module
+          <br /> to increase and decrease the students count.
         </h4>
         <label>Students Count: </label>
         <input
@@ -53,14 +51,17 @@ class ClassRoom extends React.Component {
           onChange={this.handleOnChange}
           maxLength={10}
         />
+        <br />
+        <br />
+        Current Students Count: {this.state.studentsCount}
+        <br />
+        <br />
         <button onClick={this.addStudents} style={{ marginLeft: "5px" }}>
           Increase by 1
         </button>
         <button onClick={this.removeStudents} style={{ marginLeft: "5px" }}>
           Decrease by 1
         </button>
-        <br />
-        Current Students Count: {this.state.studentsCount}
       </>
     );
   }
