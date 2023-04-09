@@ -46,7 +46,8 @@ const Counter = (props) => {
     <>
       <h4>
         Here is an example of the counter module
-        <br /> to increase and decrease the counter.
+        <br /> to increase and decrease the counter
+        <br /> using the Functional component.
       </h4>
       <button style={{ marginTop: "5px" }} onClick={incrementHandler}>
         Increase by 1
