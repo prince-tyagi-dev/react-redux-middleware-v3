@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { decreaseCounter, increaseCounter } from "../../redux/actions";
 import useTotoList from "../../CustomHooks/useTodoList";
 
-const Counter = (props) => {
+const SimpleCounter = (props) => {
   const incrementHandler = () => {
     props.increaseCounter(1);
   };
@@ -45,7 +45,7 @@ const Counter = (props) => {
   return (
     <>
       <h4>
-        Here is an example of the counter module
+        Here is an example of the Counter module
         <br /> to increase and decrease the counter
         <br /> using the Functional component.
       </h4>
@@ -72,4 +72,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(SimpleCounter);

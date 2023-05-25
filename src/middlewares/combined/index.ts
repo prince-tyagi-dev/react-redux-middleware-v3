@@ -17,10 +17,10 @@ const reducer = (state = 0, action) => {
 };
 
 // Middleware Logger
-const middlewareLogger = (store) => (next) => (action) => {
-  console.info("store", store);
-  console.info("next", next);
-  console.info("action", action);
+const middlewareLogger = (store: any) => (next: any) => (action: any) => {
+  console.info("store=", store);
+  console.info("next=", next);
+  console.info("action=", action);
   next(action);
 };
 

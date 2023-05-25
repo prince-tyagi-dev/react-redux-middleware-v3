@@ -9,7 +9,7 @@ const useTotoList = (url: string): any[] => {
       .then((data) => setList(data));
 
     console.info("data: ", list);
-  }, [url]);
+  }, [url, list]);
 
   return list;
 };

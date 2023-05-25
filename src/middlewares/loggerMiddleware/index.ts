@@ -1,7 +1,7 @@
 const loggerMiddleware = (store) => (next) => (action) => {
-  console.info(store);
-  console.info(next);
-  console.info(action);
+  console.info("store=", store);
+  console.info("next=", next);
+  console.info("action=", action);
   next(action);
 };
 

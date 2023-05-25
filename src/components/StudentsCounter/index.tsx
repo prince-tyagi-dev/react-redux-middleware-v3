@@ -1,11 +1,11 @@
 import React from "react";
 
-interface IClassRoomState {
+interface IStudentsCounterState {
   studentsCount: number;
 }
 
-class ClassRoom extends React.Component {
-  state: IClassRoomState;
+class StudentsCounter extends React.Component {
+  state: IStudentsCounterState;
 
   constructor(props: any) {
     super(props);
@@ -30,7 +30,7 @@ class ClassRoom extends React.Component {
   // Pass a function to the setState function to show how its used,
   // the prevState to update te state.
   removeStudents() {
-    this.setState((prevState: IClassRoomState) => {
+    this.setState((prevState: IStudentsCounterState) => {
       return { ...prevState, studentsCount: prevState.studentsCount - 1 };
     });
   }
@@ -72,4 +72,4 @@ class ClassRoom extends React.Component {
     );
   }
 }
-export default ClassRoom;
+export default StudentsCounter;
