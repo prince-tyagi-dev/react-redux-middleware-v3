@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import StudentsCounter from "./components/StudentsCounter";
 import SimpleCounter from "./components/SimpleCounter";
 import Home from "./components/Home";
@@ -9,24 +9,22 @@ const App = (): JSX.Element => {
     <div className="App">
       <ul>
         <li>
-          <a href="/home">Home</a>
+          <Link to="/home">Home</Link>
         </li>
         <li>
-          <a href="/students-counter">Students Counter</a>
+          <Link to="/students-counter">Students Counter</Link>
         </li>
         <li>
-          <a href="/simple-counter">Simple Counter</a>
+          <Link to="/simple-counter">Simple Counter</Link>
         </li>
       </ul>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="/home" element={<Home />} />
-          </Route>
-          <Route path="/students-counter" element={<StudentsCounter />} />
-          <Route path="/simple-counter" element={<SimpleCounter />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/home" element={<Home />} />
+        </Route>
+        <Route path="/students-counter" element={<StudentsCounter />} />
+        <Route path="/simple-counter" element={<SimpleCounter />} />
+      </Routes>
     </div>
   );
 };

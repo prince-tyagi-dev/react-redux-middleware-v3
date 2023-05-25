@@ -6,10 +6,11 @@ const useTotoList = (url: string): any[] => {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setList(data));
-
-    console.info("data: ", list);
-  }, [url, list]);
+      .then((data) => {
+        console.info("data: ", data);
+        setList(data);
+      });
+  }, [url]);
 
   return list;
 };
