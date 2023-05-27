@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { connect } from "react-redux";
 import { decreaseCounter, increaseCounter } from "../../redux/actions";
-import useTotoList from "../../CustomHooks/useTodoList";
+import useTotoList from "../../customHooks/useTodoList";
 
 const SimpleCounter = (props) => {
   const incrementHandler = () => {
